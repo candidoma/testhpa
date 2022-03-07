@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-rest-server
+  labels:
+    app: simple-rest-server
+spec:
+  selector:
+    matchLabels:
+      app: simple-rest-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-rest-server
+    spec:
+      containers:
+      - name: server
+        image: YOUR_REPO/spring-rest-server:0.1
+        ports:
+        - containerPort: 80
+          name: http-port
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 1500m
+          requests:
+            cpu: 500m

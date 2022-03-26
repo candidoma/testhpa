@@ -4,12 +4,15 @@ metadata:
   name: simple-rest-server-service
   labels:
     app: simple-rest-server
+  annotations:
+    cloud.google.com/backend-config: '{"default": "simple-rest-server-bc"}'
+    cloud.google.com/neg: '{"ingress": true}'
 spec:
   type: ClusterIP
   selector:
     app: simple-rest-server
   ports:
   - protocol: TCP
-    port: 80
+    port: 8080
     targetPort: http-port
     name: http

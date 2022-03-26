@@ -15,10 +15,10 @@ spec:
     - type: External
       external:
         metric:
-          name: "loadbalancing.googleapis.com|https|request_count"
+          name: "YOUR_METRIC"
           selector:
             matchLabels:
-              resource.labels.url_map_name: "k8s2-um-4vubmsmu-default-nginx-ingress-91yjparm"
+              resource.labels.url_map_name: "YOUR_URL_MAP_NAME"
         target:
           type: AverageValue
-          value: "50000m"
+          value: "YOUR_VALUE"

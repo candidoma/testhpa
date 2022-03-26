@@ -21,4 +21,4 @@ spec:
               reducer: "REDUCE_PERCENTILE_99"
         target:
           type: AverageValue
-          value: "50000m"
+          averageValue: "YOUR_VALUE"

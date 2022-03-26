@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
       - name: server
-        image: YOUR_REPO/spring-rest-server:0.1
+        image: YOUT_REPO/simple-rest-server:0.1
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: http-port
           protocol: TCP
         resources:

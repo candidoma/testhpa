@@ -16,6 +16,9 @@ spec:
       external:
         metric:
           name: "YOUR_METRIC_NAME"
+          selector:
+            matchLabels:
+              metric.labels.host: "YOUR_HOST"
         target:
-          type: Value
-          value: "YOUR_VALUE"
+          type: AverageValue
+          averageValue: "YOUR_VALUE"

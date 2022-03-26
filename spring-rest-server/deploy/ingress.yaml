@@ -1,12 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  annotations:
-    kubernetes.io/ingress.class: "gce"
   labels:
     app: simple-rest-server
   name: simple-rest-server-ingress
 spec:
+  ingressClassName: nginx
   rules:
     - host: "YOUR_DOMAIN"
       http:
@@ -16,5 +15,5 @@ spec:
                 name: simple-rest-server-service
                 port:
                   name: http
-            path: /*
-            pathType: ImplementationSpecific
+            path: /
+            pathType: Prefix

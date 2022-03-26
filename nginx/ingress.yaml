@@ -8,7 +8,7 @@ metadata:
   name: nginx-ingress
 spec:
   rules:
-    - host: "35.201.95.239.nip.io"
+    - host: "YOUR_DOMAIN"
       http:
         paths:
           - backend:
